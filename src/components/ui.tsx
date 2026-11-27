@@ -56,13 +56,17 @@ export function IconButton({ label, onClick, children }: { label: string; onClic
   );
 }
 
+export function getIsTelegram(): boolean {
+  return Boolean(window.Telegram?.WebApp?.initData);
+}
+
 /** Header for nested pages. Telegram supplies its own back button, so we only draw one in a browser. */
 export function PageHeader({ title, fallback = "/home" }: { title: string; fallback?: string }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
   return (
     <Flex align="center" gap="3" mb="5" minH="44px" pt="var(--tg-safe-area-inset-top)">
-      {!isTelegram && (
+      {!getIsTelegram() && (
         <IconButton
           label={t("common.back")}
           onClick={() => (window.history.state?.idx > 0 ? navigate(-1) : navigate(fallback))}
