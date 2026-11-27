@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { LuChevronLeft } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
-import { isTelegram } from "../lib/telegram";
+// import { isTelegram } from "../lib/telegram";
 
 /** Base for every custom button: 48px tall, pill, visible focus, pressed state. */
 export const PillButton = chakra("button", {
