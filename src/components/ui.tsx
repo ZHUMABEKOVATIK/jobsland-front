@@ -63,7 +63,7 @@ export function PageHeader({ title, fallback = "/home", paddingTop="var(--tg-saf
   const isTelegram = getIsTelegram();
 
   return (
-    <Flex align="center" gap="3" mb="5" minH="44px" pt="var(--tg-safe-area-inset-top)">
+    <Flex align="center" gap="3" mb="5" minH="44px" pt={paddingTop}>
       {!isTelegram && (
         <IconButton
           label={t("common.back")}
