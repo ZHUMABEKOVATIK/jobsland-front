@@ -57,7 +57,7 @@ export function IconButton({ label, onClick, children }: { label: string; onClic
 }
 
 /** Header for nested pages. Telegram supplies its own back button, so we only draw one in a browser. */
-export function PageHeader({ title, fallback = "/home" }: { title: string; fallback?: string }) {
+export function PageHeader({ title, fallback = "/home", paddingTop="var(--tg-safe-area-inset-top)" }: { title: string; fallback?: string, paddingTop?: string }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const isTelegram = getIsTelegram();

@@ -8,7 +8,7 @@ export function EditProfile() {
     return (
         <>
             <Box pt="var(--tg-content-safe-area-inset-top)">
-                <PageHeader title={"Изменить профиль"} fallback="/profile" />
+                <PageHeader title={"Изменить профиль"} fallback="/profile" paddingTop="0" />
                 йцу
             </Box>
         </>
