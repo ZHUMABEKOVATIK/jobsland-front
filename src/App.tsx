@@ -13,7 +13,7 @@ import { EditProfile } from "./pages/EditProfile";
 
 function RootRedirect({ to = "/" }: { to?: string}) {
   const { hash, search } = useLocation();
-  return <Navigate to={`/${to}${search}${hash}`} replace />;
+  return <Navigate to={`${to}${search}${hash}`} replace />;
 }
 
 export default function App() {
