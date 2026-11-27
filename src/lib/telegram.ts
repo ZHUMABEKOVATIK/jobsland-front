@@ -44,6 +44,10 @@ declare global {
 
 export const tg: TelegramWebApp | undefined = window.Telegram?.WebApp;
 
+export function getIsTelegram(): boolean {
+  return Boolean(window.Telegram?.WebApp?.initData);
+}
+
 /** True only when the page actually runs inside a Telegram client. */
 export const isTelegram = Boolean(tg?.initData);
 
