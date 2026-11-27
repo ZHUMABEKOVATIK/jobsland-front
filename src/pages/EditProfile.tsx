@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import { LANGUAGES } from "../i18n/languages"
 import { countryName } from "../i18n/languages"
 import { LanguageSheet, CountrySheet } from "../components/Pickers"
+import { PillButton } from "../components/ui"
 
 import { LuLanguages, LuGlobe } from "react-icons/lu"
 
@@ -34,6 +35,10 @@ export function EditProfile() {
                     />
                 </Box>
             </Box>
+
+            <PillButton type="submit" tone="signal" full minH="54px">
+                Save
+            </PillButton>
 
             <LanguageSheet open={sheet === "lang"} onClose={() => setSheet(null)} />
             <CountrySheet open={sheet === "country"} onClose={() => setSheet(null)} />
