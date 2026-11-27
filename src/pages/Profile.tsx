@@ -57,11 +57,11 @@ export function Profile() {
         )}
       </Flex>
 
-      <Box bg="surface" borderRadius="22px" overflow="hidden" mb="6">
+      <Box bg="surface" borderRadius="22px" overflow="hidden" mb="4">
         <Row icon={<MdEdit size={20} />} label={"Изменить профиль"} onClick={() => navigate("/edit-profile")} />
       </Box>
 
-      <Flex bg="surface" borderRadius="22px" mb="6" py="3">
+      <Flex bg="surface" borderRadius="22px" mb="4" py="3">
         {stats.map((s, i) => (
           <Box key={s.key} flex="1" textAlign="center" borderLeft={i ? "1px solid" : "none"} borderColor="line" px="1">
             <Text fontFamily="heading" fontWeight="700" fontSize="20px" color={s.color}>
