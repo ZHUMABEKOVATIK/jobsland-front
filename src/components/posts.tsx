@@ -153,7 +153,18 @@ export function SegmentedControl<T extends string>({
               <chakra.span position="relative" display="inline-flex" alignItems="center" gap="1.5">
                 {it.label}
                 {it.count !== undefined && (
-                  <chakra.span fontSize="12px" fontWeight="600" color={active ? "signal" : "inkMuted"} opacity={active ? 1 : 0.8}>
+                  <chakra.span 
+                    fontSize="12px"
+                    px="2"
+                    h="18px" 
+                    display="flex" 
+                    justifyContent="center" 
+                    bg="canvas" 
+                    borderRadius="full"
+                    fontWeight="600" 
+                    color={active ? "signal" : "inkMuted"} 
+                    opacity={active ? 1 : 0.8}
+                  >
                     {it.count}
                   </chakra.span>
                 )}

@@ -50,6 +50,7 @@ const config = defineConfig({
         approvedSoft: { value: { base: "#D8F6E8", _dark: "#173327" } },
         rejected: { value: { base: "#C8243B", _dark: "#FF7D8E" } },
         rejectedSoft: { value: { base: "#FFE1E5", _dark: "#3D1C23" } },
+        postCountBg: { value: { base: "#00000023", _dark: "#aeaeae23" } },
       },
     },
   },
