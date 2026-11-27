@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LuCompass } from "react-icons/lu";
 import { AppShell } from "./components/AppShell";
@@ -11,11 +11,16 @@ import { PostDetail } from "./pages/PostDetail";
 import { Profile } from "./pages/Profile";
 import { EditProfile } from "./pages/EditProfile";
 
+function RootRedirect({ to = "/" }: { to?: string}) {
+  const { hash, search } = useLocation();
+  return <Navigate to={`/${to}${search}${hash}`} replace />;
+}
+
 export default function App() {
   return (
     <Routes>
       <Route element={<AppShell />}>
-        <Route index element={<Navigate to="/home" replace />} />
+        <Route index element={<RootRedirect to="/home" />} />
         <Route path="home">
           <Route index element={<Home />} />
           {CATEGORIES.map((c) => (
