@@ -65,13 +65,13 @@ export function MyPosts() {
 
   return (
     <>
-      <Flex align="baseline" gap="2" mb="5" pt="var(--tg-safe-area-inset-top)">
+      <Flex align="baseline" gap="2" mb="5" pt="var(--tg-safe-area-inset-top)" alignItems="center">
         <Heading as="h1" fontSize="26px" fontWeight="700" letterSpacing="-0.02em">
           {t("posts.title")}
         </Heading>
         {posts && posts.length > 0 && (
           <Text fontFamily="heading" fontWeight="600" color="inkMuted" fontSize="18px" bg="">
-            <Box py="1" px="2" bg="surface" borderRadius="xl" boxShadow="0 0 5px #000">
+            <Box py="1" px="2" bg="surface" borderRadius="xl" boxShadow="0 0 5px #0000000c">
               {posts.length}
             </Box>
           </Text>
