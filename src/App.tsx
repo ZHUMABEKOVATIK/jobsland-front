@@ -9,7 +9,7 @@ import { Home } from "./pages/Home";
 import { MyPosts } from "./pages/MyPosts";
 import { PostDetail } from "./pages/PostDetail";
 import { Profile } from "./pages/Profile";
-import { EditProfile } from "./pages/editProfile";
+import { EditProfile } from "./pages/EditProfile";
 
 export default function App() {
   return (

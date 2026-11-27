@@ -5,7 +5,7 @@ export function EditProfile() {
     return (
         <>
             <Box pt="var(--tg-content-safe-area-inset-top)">
-                123
+                123sqwe
             </Box>
         </>
     )

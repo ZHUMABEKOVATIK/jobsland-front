@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, SimpleGrid, Text, chakra } from "@chakra-ui/react";
+import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { motion, type Variants } from "motion/react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
