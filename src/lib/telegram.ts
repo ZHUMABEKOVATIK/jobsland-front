@@ -3,6 +3,7 @@ import { useEffect } from "react";
 /** Minimal typing for the parts of Telegram.WebApp we use. */
 interface TelegramWebApp {
   initData: string;
+  platform: string;
   initDataUnsafe: {
     user?: {
       id: number;
@@ -49,7 +50,10 @@ export function getIsTelegram(): boolean {
 }
 
 /** True only when the page actually runs inside a Telegram client. */
-export const isTelegram = Boolean(tg?.initData);
+const isTelegram = Boolean(
+  window.Telegram?.WebApp?.initData || 
+  window.Telegram?.WebApp?.platform !== "unknown"
+);
 
 export function initTelegram() {
   if (!tg) return;
