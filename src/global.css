@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+:root {
+  --bg: #0b0b0d;
+  --color-text-muted: #9a9aa2;
+  --color-text-faint: #6a6a72;
+  --safe-area-inset-top: var(--tg-safe-area-inset-top);
+  --safe-area-content-inset-top: var(--tg-content-safe-area-inset-top);
+
+  --active-bg-color-5: color-mix(in oklab, #fff 5%, transparent);
+  --active-bg-color-8: color-mix(in oklab, #fff 8%, transparent);
+  --active-bg-color-20: color-mix(in oklab, #fff 20%, transparent);
+}
+
+[data-color-scheme="dark"] {
+  --primary-color: #ededf0;
+}
+
+[color-scheme="light"] {
+  --primary-color: #000;
+}
